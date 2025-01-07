@@ -77,11 +77,12 @@ body {
 .social-media i {
     font-size: 2rem;
     color: #007bff;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-media i:hover {
     transform: scale(1.1);
+    color: #0056b3;
 }
 
 .contact-form {
@@ -125,6 +126,21 @@ body {
     background-color: #0056b3;
 }
 
+.theme-toggle-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
@@ -160,6 +176,14 @@ body.dark-mode .link-button:hover {
     background-color: #9b59b6;
 }
 
+body.dark-mode .social-media i {
+    color: #bb86fc;
+}
+
+body.dark-mode .social-media i:hover {
+    color: #9b59b6;
+}
+
 body.dark-mode .contact-form label {
     color: #e0e0e0;
 }
@@ -177,5 +201,14 @@ body.dark-mode .contact-form button {
 }
 
 body.dark-mode .contact-form button:hover {
+    background-color: #9b59b6;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
     background-color: #9b59b6;
 }
