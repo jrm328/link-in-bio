@@ -5,6 +5,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none; /* Ensure links are not underlined */
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -72,11 +76,11 @@ body {
 
 .social-media a {
     margin: 0 0.5rem;
+    color: #007bff; /* Ensure icons have consistent color */
 }
 
 .social-media i {
     font-size: 2rem;
-    color: #007bff;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
