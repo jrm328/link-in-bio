@@ -1,7 +1,8 @@
 ---
-# Only front matter so Jekyll processes this file
+# leave this empty front matter so Jekyll processes the file
 ---
 
-@import "minimal-mistakes/skins/dark";   // or your chosen skin
-@import "minimal-mistakes";              // theme core
-@import "overrides";                     // your tweaks
+@import "minimal-mistakes/skins/dark"; // pick your skin
+@import "minimal-mistakes";            // load the theme core
+// optional: your tweaks
+@import "overrides";
