@@ -1,38 +1,43 @@
-/* ============================
-   Its Just Joe – Theme Overrides
-   (No front matter in _sass files)
-   ============================ */
+/* =========================================
+   Its Just Joe — Theme Overrides
+   ========================================= */
 
 /* ---------- Page width (room for 3 wide cards) ---------- */
 @media (min-width: 1200px) {
   .page,
-  .initial-content {
-    max-width: 1360px; /* bump to 1440px if you want even wider */
-  }
+  .initial-content { max-width: 1360px; } /* bump to 1440px if you want even wider */
 }
 
 /* ---------- ARCHIVE / GRID (cards only) ---------- */
-/* Base: single column for phones */
+/* Force grid on the entries container and reset legacy widths */
 .entries-grid {
-  display: grid;
-  grid-template-columns: 1fr;      /* 1-up mobile */
+  display: grid !important;
+  grid-template-columns: 1fr;          /* 1-up mobile */
   gap: 1.5rem;
 }
 
-/* Ensure children can shrink properly inside grid tracks */
-.entries-grid > * { min-width: 0; }
+/* Children must be allowed to shrink/grow; kill floats/widths */
+.entries-grid > * { min-width: 0; width: auto !important; float: none !important; }
+
+/* Some MM versions use .grid__item or .list__item under .entries-grid — normalize both */
+.entries-grid .grid__item,
+.entries-grid .list__item {
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
+}
 
 /* Tablet: 2-up */
 @media (min-width: 768px) {
   .entries-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
-/* Desktop: 3-up (wider cards) */
+/* Desktop: 3-up */
 @media (min-width: 1200px) {
   .entries-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 1.75rem;
   }
 }
@@ -56,16 +61,8 @@
 }
 
 /* Thumbnail: enforce 16:9 crop, full-bleed */
-.archive__item-teaser {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
-.archive__item-teaser img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+.archive__item-teaser { aspect-ratio: 16 / 9; overflow: hidden; }
+.archive__item-teaser img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Card content spacing/typography */
 .archive__item-title { margin: .75rem 1rem 0; line-height: 1.25; }
@@ -84,19 +81,16 @@ a:hover { color: lighten(#1E4BD1, 10%); }
 }
 
 /* Masthead / nav */
-.masthead {
-  background: #121B28;
-  border-bottom: 1px solid rgba(232, 238, 246, 0.06);
-}
+.masthead { background: #121B28; border-bottom: 1px solid rgba(232,238,246,.06); }
 .site-title, .greedy-nav a { color: #E8EEF6; }
 .greedy-nav a:hover { color: #F2C14E; }          /* gold hover */
 
-/* Author avatar a bit softer */
+/* Author avatar */
 .author__avatar img { border-radius: 16px; }
 
 /* Tag pills */
 .page__taxonomy-item {
-  background: rgba(30, 75, 209, 0.18);           /* primary blue tint */
+  background: rgba(30, 75, 209, 0.18);
   color: #E8EEF6;
   border-color: transparent;
 }
