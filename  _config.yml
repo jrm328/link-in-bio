@@ -1,0 +1,100 @@
+title: "Its Just Joe"
+description: "Clash Royale news, meta snapshots, decks, and videos."
+url: "https://jrm328.github.io"   # update
+baseurl: "/link-in-bio"                            # or "/repo-name" for project sites
+permalink: /:categories/:title/
+
+theme: null
+remote_theme: "mmistakes/minimal-mistakes@latest"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Minimal Mistakes settings
+minimal_mistakes_skin: "dark"    # "default", "air", "contrast", etc.
+paginate: 8
+paginate_path: /news/page:num/
+search: true
+lunr:
+  search_within_pages: true
+
+# Collections
+collections:
+  videos:
+    output: true
+    permalink: /videos/:name/
+  decks:
+    output: true
+    permalink: /decks/:name/
+  patches:
+    output: true
+    permalink: /patches/:name/
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  - scope: { path: "", type: "videos" }
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "main"
+  - scope: { path: "", type: "decks" }
+    values:
+      layout: single
+      author_profile: true
+  - scope: { path: "", type: "patches" }
+    values:
+      layout: single
+      author_profile: true
+
+# Navigation
+navbar:
+  title: "Joe Royale"
+
+# Author box
+author:
+  name: "Joe"
+  avatar: "/assets/img/avatar.png"
+  bio: "Clash Royale news, meta & decks—plus weekly videos."
+  links:
+    - label: YouTube
+      icon: "fab fa-youtube"
+      url: "https://youtube.com/@itsjustjoe"   # update
+    - label: X / Twitter
+      icon: "fab fa-twitter"
+      url: "https://x.com/"                   # update
+    - label: Contact
+      icon: "fas fa-envelope"
+      url: "/contact/"
+
+# SEO / feeds
+social:
+  name: "Joe Royale"
+  links:
+    - https://youtube.com/@itsjustjoe
+    - https://x.com/
+feed:
+  path: feed.xml
+
+# Archives (optional)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
