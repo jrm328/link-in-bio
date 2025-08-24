@@ -51,10 +51,10 @@ Welcome to this week’s **Meta Snapshot** — a quick breakdown of the Clash Ro
    [View Guide](/decks/xbow-mortar-double-siege/) · [Watch Video](/videos/this-double-siege-deck-is-insane/)  
 
 2. **Miner Poison Phoenix**  
-   ```clashroyale://copyDeck?deck=26000032;26000048;26000049;26000015;26000019;26000022;26000030;28000017```
+   {% include deck-copy-button.html link="clashroyale://copyDeck?deck=26000032;26000048;26000049;26000015;26000019;26000022;26000030;28000017" %}
 
 3. **Royal Giant Lightning**  
-   ```clashroyale://copyDeck?deck=26000024;26000039;26000040;26000042;26000010;26000006;26000012;27000002```
+   {% include deck-copy-button.html link="clashroyale://copyDeck?deck=26000024;26000039;26000040;26000042;26000010;26000006;26000012;27000002" %}
 
 ---
 
