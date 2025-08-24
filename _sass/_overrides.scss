@@ -1,50 +1,35 @@
 /* =========================================
-   Its Just Joe — Theme Overrides
+   Its Just Joe — Theme Overrides (2-up grid)
    ========================================= */
 
-/* ---------- Page width (room for 3 wide cards) ---------- */
+/* ---------- Page width (comfortable for 2 cards) ---------- */
 @media (min-width: 1200px) {
   .page,
-  .initial-content { max-width: 1360px; } /* bump to 1440px if you want even wider */
+  .initial-content { max-width: 1280px; } /* tweak to 1200–1360 if you want */
 }
 
 /* ---------- ARCHIVE / GRID (cards only) ---------- */
-/* Force grid on the entries container and reset legacy widths */
 .entries-grid {
   display: grid !important;
-  grid-template-columns: 1fr;          /* 1-up mobile */
+  grid-template-columns: 1fr;     /* phones: 1-up */
   gap: 1.5rem;
 }
-
-/* Children must be allowed to shrink/grow; kill floats/widths */
+/* children shouldn’t have legacy widths/floats */
 .entries-grid > * { min-width: 0; width: auto !important; float: none !important; }
-
-/* Some MM versions use .grid__item or .list__item under .entries-grid — normalize both */
 .entries-grid .grid__item,
-.entries-grid .list__item {
-  width: auto !important;
-  float: none !important;
-  margin: 0 !important;
-}
+.entries-grid .list__item { width: auto !important; float: none !important; margin: 0 !important; }
 
-/* Tablet: 2-up */
+/* tablet & desktop: 2-up (stay 2 on wide screens) */
 @media (min-width: 768px) {
   .entries-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-/* Desktop: 3-up */
-@media (min-width: 1200px) {
-  .entries-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 1.75rem;
   }
 }
 
 /* ---------- CARD LOOK ---------- */
 .archive__item {
-  background: #121B28;                            /* card slate */
+  background: #121B28;
   border: 1px solid rgba(232, 238, 246, 0.06);
   border-radius: 16px;
   overflow: hidden;
@@ -57,46 +42,53 @@
 .archive__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  border-color: rgba(242, 193, 78, 0.25);        /* gold hint on hover */
+  border-color: rgba(242, 193, 78, 0.25);
 }
-
-/* Thumbnail: enforce 16:9 crop, full-bleed */
+/* thumbnail: 16:9 crop */
 .archive__item-teaser { aspect-ratio: 16 / 9; overflow: hidden; }
 .archive__item-teaser img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-/* Card content spacing/typography */
+/* content spacing */
 .archive__item-title { margin: .75rem 1rem 0; line-height: 1.25; }
 .archive__item-excerpt { margin: .5rem 1rem 1rem; color: rgba(232, 238, 246, .82); }
 .archive__item-readmore { margin: 0 1rem 1rem; }
 
-/* ---------- GLOBAL POLISH (CR blue + gold accents) ---------- */
+/* ---------- Blurred hero image on single posts ---------- */
+.layout--single .page__hero--overlay {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #0F1722; /* fallback while loading */
+}
+.layout--single .page__hero--overlay::after {
+  content: "";
+  position: absolute;
+  inset: -12px;                 /* bleed to hide blur edge */
+  background: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(8px);
+  transform: scale(1.04);
+  z-index: 0;
+}
+/* keep theme’s dark overlay + text on top of blur */
+.layout--single .page__hero--overlay::before { z-index: 1; }
+.layout--single .page__hero--overlay > * { position: relative; z-index: 2; }
+
+/* ---------- Global polish (CR blue + gold) ---------- */
 a { color: #1E4BD1; }
 a:hover { color: lighten(#1E4BD1, 10%); }
-
 .btn--primary {
   background: linear-gradient(180deg, #1E4BD1, #0B2D99);
   color: #E8EEF6;
   border: 0;
   border-radius: 999px;
 }
-
-/* Masthead / nav */
 .masthead { background: #121B28; border-bottom: 1px solid rgba(232,238,246,.06); }
 .site-title, .greedy-nav a { color: #E8EEF6; }
-.greedy-nav a:hover { color: #F2C14E; }          /* gold hover */
-
-/* Author avatar */
+.greedy-nav a:hover { color: #F2C14E; }
 .author__avatar img { border-radius: 16px; }
-
-/* Tag pills */
-.page__taxonomy-item {
-  background: rgba(30, 75, 209, 0.18);
-  color: #E8EEF6;
-  border-color: transparent;
-}
-
-/* Selection color */
-::selection { background: rgba(242, 193, 78, 0.35); }
-
-/* Optional: tighten page title tracking */
+.page__taxonomy-item { background: rgba(30,75,209,.18); color:#E8EEF6; border-color: transparent; }
+::selection { background: rgba(242,193,78,.35); }
 .page__title { letter-spacing: 0.2px; }
