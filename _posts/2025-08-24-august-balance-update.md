@@ -8,6 +8,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.4"
   teaser: /assets/img/posts/august-balance.jpg
+  thumbnail: /assets/img/posts/august-balance.jpg
 ---
 
 Supercell’s August balance changes are live, and the ladder meta is already shifting. Here are the biggest highlights:

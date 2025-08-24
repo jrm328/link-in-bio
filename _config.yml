@@ -48,7 +48,7 @@ defaults:
 
 author:
   name: "Joe"
-  avatar: "{{ '/assets/img/avatar.png' | relative_url }}"
+  avatar: /assets/img/avatar.png
   bio: "Clash Royale news, meta & decks—plus weekly videos."
   links:
     - label: YouTube

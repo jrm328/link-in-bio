@@ -5,3 +5,7 @@
 @import "minimal-mistakes/skins/dark"; // pick a skin: default, air, contrast, dark, ...
 @import "minimal-mistakes";            // load the theme core
 @import "overrides";                    // your tweaks (lives in _sass/_overrides.scss)
+
+.hero {
+  background-image: url("../img/meta/meta-aug25.jpg");
+}

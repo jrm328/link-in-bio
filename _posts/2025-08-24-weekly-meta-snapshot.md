@@ -1,13 +1,14 @@
 ---
 title: "Weekly Meta Snapshot – August 25, 2025"
 date: 2025-08-24
-categories: ![Meta]({{ '/assets/img/meta/meta-aug25.jpg' | relative_url }})
+categories: [Meta]
 tags: [Ladder, Top Decks, Trends]
 excerpt: "Our breakdown of the Clash Royale ladder and tournament meta this week — which decks are on top, which are falling off, and what you should play to climb."
 header:
   overlay_color: "#000"
   overlay_filter: "0.4"
   teaser: /assets/img/meta/meta-aug25.jpg
+  thumbnail: /assets/img/meta/meta-aug25.jpg
 ---
 
 Welcome to this week’s **Meta Snapshot** — a quick breakdown of the Clash Royale ladder and tournament environment, based on top 200 ladder replays, community tourneys, and early CRL scrims.
