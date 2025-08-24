@@ -7,8 +7,6 @@ main:
     url: /decks/
   - title: "Meta"
     url: /category/meta/
-  - title: "Patches"
-    url: /patches/
   - title: "About"
     url: /about/
   - title: "Search"
