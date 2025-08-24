@@ -60,7 +60,7 @@ defaults:
 
 # Navigation
 navbar:
-  title: "Joe Royale"
+  title: "Its Just Joe"
 
 # Author box
 author:
@@ -80,7 +80,7 @@ author:
 
 # SEO / feeds
 social:
-  name: "Joe Royale"
+  name: "Its Just Joe"
   links:
     - https://youtube.com/@itsjustjoe
     - https://x.com/
