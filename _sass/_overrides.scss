@@ -1,31 +1,64 @@
-/* Roomier cards with bigger thumbnails */
-.entries-grid,
-.layout--home .archive { /* both home and posts listing */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 1.25rem; /* space between cards */
-}
+/* ============================
+   Its Just Joe – Theme Overrides
+   (No front matter in _sass files)
+   ============================ */
 
-.page__taxonomy-item { background: rgba(30,75,209,.18); color:#E8EEF6; }
-.author__avatar img { border-radius: 16px; }
-::selection { background: rgba(242,193,78,.35); }
-
-
-@media (min-width: 1400px) {
-  .entries-grid,
-  .layout--home .archive {
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    gap: 1.5rem;
+/* ---------- Page width (room for 3 wide cards) ---------- */
+@media (min-width: 1200px) {
+  .page,
+  .initial-content {
+    max-width: 1360px; /* bump this to 1440px if you want even wider */
   }
 }
 
-/* Card look */
+/* ---------- ARCHIVE / GRID LAYOUT ---------- */
+/* Base: single column for phones */
+.layout--home .archive,
+.layout--posts .archive,
+.layout--collection .archive,
+.entries-grid {
+  display: grid;
+  grid-template-columns: 1fr;      /* 1-up mobile */
+  gap: 1.5rem;
+}
+
+/* Tablet: 2-up */
+@media (min-width: 768px) {
+  .layout--home .archive,
+  .layout--posts .archive,
+  .layout--collection .archive,
+  .entries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: 3-up (wider cards) */
+@media (min-width: 1200px) {
+  .layout--home .archive,
+  .layout--posts .archive,
+  .layout--collection .archive,
+  .entries-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+}
+
+/* ---------- CARD LOOK ---------- */
 .archive__item {
-  background: #121B28;
-  border: 1px solid rgba(232, 238, 246, .06);
+  background: #121B28;                            /* card slate */
+  border: 1px solid rgba(232, 238, 246, 0.06);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  border-color: rgba(242, 193, 78, 0.25);        /* gold hint on hover */
 }
 
 /* Thumbnail: enforce 16:9 crop, full-bleed */
@@ -40,30 +73,43 @@
   display: block;
 }
 
-/* Card content spacing */
-.archive__item-title { margin-top: .6rem; }
-.archive__item-excerpt { color: rgba(232,238,246,.82); }
+/* Card content spacing/typography */
+.archive__item-title { margin: .75rem 1rem 0; line-height: 1.25; }
+.archive__item-excerpt { margin: .5rem 1rem 1rem; color: rgba(232, 238, 246, .82); }
+.archive__item-readmore { margin: 0 1rem 1rem; }
 
-/* Max page width */
-@media (min-width: 1200px) {
-  .page,
-  .initial-content {
-    max-width: 1200px; /* bump from default */
-  }
-}
-
-/* Brand touches */
+/* ---------- GLOBAL POLISH ---------- */
+/* Links and buttons (CR blue + gold accent) */
 a { color: #1E4BD1; }
 a:hover { color: lighten(#1E4BD1, 10%); }
+
 .btn--primary {
   background: linear-gradient(180deg, #1E4BD1, #0B2D99);
   color: #E8EEF6;
   border: 0;
   border-radius: 999px;
 }
+
+/* Masthead */
 .masthead {
   background: #121B28;
-  border-bottom: 1px solid rgba(232,238,246,.06);
+  border-bottom: 1px solid rgba(232, 238, 246, 0.06);
 }
 .site-title, .greedy-nav a { color: #E8EEF6; }
-.greedy-nav a:hover { color: #F2C14E; } /* gold hover */
+.greedy-nav a:hover { color: #F2C14E; }          /* gold hover */
+
+/* Author avatar a bit softer */
+.author__avatar img { border-radius: 16px; }
+
+/* Tag pills */
+.page__taxonomy-item {
+  background: rgba(30, 75, 209, 0.18);           /* primary blue tint */
+  color: #E8EEF6;
+  border-color: transparent;
+}
+
+/* Selection color */
+::selection { background: rgba(242, 193, 78, 0.35); }
+
+/* Optional: tighten page title tracking */
+.page__title { letter-spacing: 0.2px; }
