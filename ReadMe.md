@@ -33,3 +33,4 @@ The site highlights **Clash Royale news, weekly meta snapshots, deck guides, and
 
 - **Content** - © 2025 Joe McLauchlan
 - **Theme** - Minimal Mistakes (MIT).
+
