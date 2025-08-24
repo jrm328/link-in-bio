@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
-gem "webrick", "~> 1.8"          # local dev on Ruby 3.x
+gem "webrick", "~> 1.8"
 
-# Minimal Mistakes is used via remote_theme, but we need its plugins:
+gem "jekyll-remote-theme"   # <-- add this
 gem "jekyll-include-cache"
 gem "jekyll-archives"
 gem "jekyll-paginate"

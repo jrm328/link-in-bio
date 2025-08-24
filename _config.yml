@@ -8,6 +8,7 @@ theme: null
 remote_theme: "mmistakes/minimal-mistakes@latest"
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-archives
   - jekyll-paginate
