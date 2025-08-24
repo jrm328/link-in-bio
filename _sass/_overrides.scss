@@ -1,5 +1,69 @@
-// Put ONLY valid CSS/SCSS here. No YAML front matter, no URLs, no Liquid tags.
+/* Roomier cards with bigger thumbnails */
+.entries-grid,
+.layout--home .archive { /* both home and posts listing */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.25rem; /* space between cards */
+}
 
-// Example tweaks:
-.btn--primary { border-radius: 999px; font-weight: 700; }
-.page__hero--overlay .page__title { letter-spacing: 0.2px; }
+.page__taxonomy-item { background: rgba(30,75,209,.18); color:#E8EEF6; }
+.author__avatar img { border-radius: 16px; }
+::selection { background: rgba(242,193,78,.35); }
+
+
+@media (min-width: 1400px) {
+  .entries-grid,
+  .layout--home .archive {
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Card look */
+.archive__item {
+  background: #121B28;
+  border: 1px solid rgba(232, 238, 246, .06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+
+/* Thumbnail: enforce 16:9 crop, full-bleed */
+.archive__item-teaser {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.archive__item-teaser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card content spacing */
+.archive__item-title { margin-top: .6rem; }
+.archive__item-excerpt { color: rgba(232,238,246,.82); }
+
+/* Max page width */
+@media (min-width: 1200px) {
+  .page,
+  .initial-content {
+    max-width: 1200px; /* bump from default */
+  }
+}
+
+/* Brand touches */
+a { color: #1E4BD1; }
+a:hover { color: lighten(#1E4BD1, 10%); }
+.btn--primary {
+  background: linear-gradient(180deg, #1E4BD1, #0B2D99);
+  color: #E8EEF6;
+  border: 0;
+  border-radius: 999px;
+}
+.masthead {
+  background: #121B28;
+  border-bottom: 1px solid rgba(232,238,246,.06);
+}
+.site-title, .greedy-nav a { color: #E8EEF6; }
+.greedy-nav a:hover { color: #F2C14E; } /* gold hover */

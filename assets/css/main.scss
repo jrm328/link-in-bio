@@ -2,7 +2,7 @@
 # leave this front matter so Jekyll processes the file
 ---
 
-@import "minimal-mistakes/skins/dark"; // pick a skin: default, air, contrast, dark, ...
+@import "minimal-mistakes/skins/itsjustjoe"; // <- use our custom skin
 @import "minimal-mistakes";            // load the theme core
 @import "overrides";                    // your tweaks (lives in _sass/_overrides.scss)
 

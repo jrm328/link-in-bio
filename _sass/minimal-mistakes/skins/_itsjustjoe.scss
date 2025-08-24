@@ -1,0 +1,25 @@
+// Custom skin for "Its Just Joe"
+$background-color:        #0F1722; // Dark Slate
+$body-background-color:   $background-color;
+$text-color:              #E8EEF6; // Off-white
+$muted-text-color:        rgba(#E8EEF6, .75);
+
+$primary-color:           #1E4BD1; // Royal Blue (links, accents)
+$accent-color:            #F2C14E; // Gold (highlights, buttons)
+$link-color:              $primary-color;
+$link-color-hover:        lighten($primary-color, 10%);
+
+$masthead-background:     #121B28; // Card Slate
+$masthead-link-color:     #E8EEF6;
+$masthead-link-color-hover: $accent-color;
+
+$border-color:            rgba(#E8EEF6, .08);
+$footer-background:       #121B28;
+
+// Cards / buttons
+$btn-primary-color:       #0B2D99; // darker blue
+$btn-primary-text-color:  #E8EEF6;
+
+// Code blocks, quotes, etc.
+$code-background-color:   rgba(#E8EEF6, .06);
+
