@@ -5,8 +5,8 @@ categories: [Meta]
 tags: [Ladder, Top Decks, Trends]
 excerpt: "Our breakdown of the Clash Royale ladder and tournament meta this week — which decks are on top, which are falling off, and what you should play to climb."
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
+  overlay_image: /assets/img/meta/meta-aug25.jpg   # path to the hero image
+  overlay_filter: 0.35                              # 0 (none) → 1 (full black)
   teaser: /assets/img/meta/meta-aug25.jpg
   thumbnail: /assets/img/meta/meta-aug25.jpg
 ---
