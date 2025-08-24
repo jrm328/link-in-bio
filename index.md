@@ -1,6 +1,7 @@
 ---
 layout: home
-author_profile: true
 title: "Clash Royale News & Videos"
-excerpt: "Daily highlights, weekly meta snapshots, and our latest videos."
+author_profile: true
+entries_layout: grid
+show_excerpts: true
 ---
