@@ -18,6 +18,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
+include:
+  - _pages
+
 minimal_mistakes_skin: "dark"
 # (Optional) pagination works best on the homepage with layout: home
 # Disable for now to avoid warnings; re-enable later if you paginate the home page.

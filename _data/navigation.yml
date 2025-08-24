@@ -1,13 +1,13 @@
 main:
   - title: "News"
-    url: /news/
+    url: "{{ '/news/' | relative_url }}"
   - title: "Videos"
-    url: /videos/
+    url: "{{ '/videos/' | relative_url }}"
   - title: "Decks"
-    url: /decks/
+    url: "{{ '/decks/' | relative_url }}"
   - title: "Meta"
-    url: /category/meta/
+    url: "{{ '/meta/'  | relative_url }}"
   - title: "About"
-    url: /about/
+    url: "{{ '/about/' | relative_url }}"
   - title: "Search"
-    url: /search/
+    url: "{{ '/search/' | relative_url }}"

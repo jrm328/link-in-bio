@@ -1,7 +1,7 @@
 ---
 title: "Weekly Meta Snapshot – August 25, 2025"
 date: 2025-08-24
-categories: [Meta]
+categories: ![Meta]({{ '/assets/img/meta/meta-aug25.jpg' | relative_url }})
 tags: [Ladder, Top Decks, Trends]
 excerpt: "Our breakdown of the Clash Royale ladder and tournament meta this week — which decks are on top, which are falling off, and what you should play to climb."
 header:
