@@ -6,7 +6,7 @@ tags: [X-Bow, Archers, Mortar, Balance Update]
 excerpt: "Supercell’s latest balance update just dropped, and it might finally be Double Siege’s time to shine again."
 header:
   overlay_image: /assets/img/posts/august-balance.jpg   # path to the hero image
-  overlay_filter: 0.35                              # 0 (none) → 1 (full black)
+  overlay_filter: 0.57                              # 0 (none) → 1 (full black)
   teaser: /assets/img/posts/august-balance.jpg
   thumbnail: /assets/img/posts/august-balance.jpg
 ---

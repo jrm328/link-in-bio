@@ -5,9 +5,10 @@ youtube_id: "dQw4w9WgXcQ"
 tags: [X-Bow, Mortar, Deck Guide]
 excerpt: "Tired of the same ladder decks? Try this spicy Double Siege list — Mortar for chip, X-Bow for punishment."
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_image: /assets/img/videos/double-siege-thumb.jpg   # path to the hero image
+  overlay_filter: 0.57                              # 0 (none) → 1 (full black)
   teaser: /assets/img/videos/double-siege-thumb.jpg
+  thumbnail: /assets/img/videos/double-siege-thumb.jpg
 ---
 
 {% include video id=page.youtube_id provider="youtube" %}

@@ -15,7 +15,7 @@ copy_link: "clashroyale://copyDeck?deck=28000017;26000001;26000015;26000049;2600
 excerpt: "A rare Double Siege deck that punishes overspending and thrives on split-lane pressure."
 header:
   overlay_image: /assets/img/decks/double-siege.jpg   # path to the hero image
-  overlay_filter: 0.35
+  overlay_filter: 0.57
   teaser: /assets/img/decks/double-siege.jpg
   thumbnail: /assets/img/decks/double-siege.jpg
 ---
