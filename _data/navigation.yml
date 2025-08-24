@@ -1,0 +1,15 @@
+main:
+  - title: "News"
+    url: /news/
+  - title: "Videos"
+    url: /videos/
+  - title: "Decks"
+    url: /decks/
+  - title: "Meta"
+    url: /category/meta/
+  - title: "Patches"
+    url: /patches/
+  - title: "About"
+    url: /about/
+  - title: "Search"
+    url: /search/

@@ -1,9 +1,7 @@
 ---
+layout: home
+author_profile: true
+title: "Clash Royale News & Videos"
+excerpt: "Daily highlights, weekly meta snapshots, and our latest videos."
 ---
 
-Welcome to My Home Page
-
-{% assign date = '2020-04-13T10:20:00Z' %}
-
-- Original date - {{ date }}
-- With timeago filter - {{ date | timeago }}
